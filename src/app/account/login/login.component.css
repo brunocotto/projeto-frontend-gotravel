@@ -1,0 +1,84 @@
+.authenticate-container {
+  width: 500px;
+}
+
+h2 {
+  color: #fff;
+  opacity: 0.9;
+}
+.register {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6833e4;
+    opacity: 0.8;
+}
+.mat-icon {
+  color: #6833e4;
+}
+
+#forgot_password {
+    margin-top: 1rem;
+    opacity: 0.7;
+    color: #6833e4;
+    text-decoration: none;
+}
+#forgot_password:hover {
+    opacity: 0.8;
+}
+
+  
+#login-account {
+  margin-top: 1rem;
+  height: 3rem;
+  width: 100%;
+  color: #fff;
+  border: solid;
+  border-color: #6833e4;
+  border-width: 1px;
+  background-color: #6833e4;
+  border-radius: 6px;
+  transition: 0.4s;
+  cursor: pointer;
+  opacity: 0.8
+}
+  
+#login-account:hover {
+    opacity: 1
+  }
+
+#create-account {
+  margin-top: 1.5rem;
+  height: 3rem;
+  width: 100%;
+  color: #fff;
+  border: solid;
+  border-color: #6833e4;
+  border-width: 1px;
+  background-color: transparent;
+  border-radius: 6px;
+  transition: 0.4s;
+  cursor: pointer;
+  opacity: 0.8
+}
+
+#create-account:hover {
+    opacity: 1;
+    background-color: #6833e4;
+}
+
+mat-form-field{
+  width: 100%;
+}
+
+input {
+  width: 500px;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0.8;
+  border-color: #6833e4 !important;
+}
+input:focused{
+  border-color: #6833e4 !important;
+}

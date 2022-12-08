@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title>Nova Viagem</mat-card-title>
+    <form>
+        <mat-form-field>
+            <!--[(ngModel)]="product.name"-->
+            <input matInput [(ngModel)]="travel.title" name="title" type="text">
+            <mat-placeholder class="placeholder">Título</mat-placeholder>
+        </mat-form-field>
+        <mat-form-field>
+            <!--[(ngModel)]="product.name"-->
+            <input matInput [(ngModel)]="travel.description" name="description" type="text">
+            <mat-placeholder class="placeholder">Descrição</mat-placeholder>
+        </mat-form-field>
+        <mat-form-field>
+            <!--[(ngModel)]="product.name"-->
+            <input matInput [(ngModel)]="travel.destiny" name="destiny" type="text">
+            <mat-placeholder class="placeholder">Destino</mat-placeholder>
+        </mat-form-field>
+        
+    </form>
+    <button id="btn-save" mat-raised-button (click)="createTravel()">
+        Salvar
+    </button>
+    
+    <button id="btn-cancel" mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

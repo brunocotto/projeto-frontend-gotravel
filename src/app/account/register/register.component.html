@@ -1,0 +1,27 @@
+<div class="register-container">
+    <form method="post" (ngSubmit)="onSubmit()" #form="ngForm">
+        <h1>Faça seu cadastro</h1>
+        <div class="box-form">
+            <mat-form-field appearance="outline">
+                <input type="text" matInput placeholder="Seu nome" [(ngModel)]="register.name" [ngModelOptions]="{standalone: true}" required>
+            <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="box-form">
+            <mat-form-field appearance="outline">
+                <input type="email" matInput placeholder="Seu e-mail" [(ngModel)]="register.email" [ngModelOptions]="{standalone: true}" required>
+            <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="box-form">
+            <mat-form-field appearance="outline">
+                <input type="password" matInput placeholder="Sua senha" [(ngModel)]="register.password" [ngModelOptions]="{standalone: true}" required>
+            <mat-icon matSuffix>locke</mat-icon>
+            </mat-form-field>
+        </div>
+        <div>
+            <button id="create-account" class="mat-button" type="submit" [disabled]="form.form.invalid">CADASTRAR</button>
+            <button id="login-account" class="mat-button" type="button" [routerLink]="['/auth/authenticate']">LOGIN</button>
+        </div>
+    </form>
+</div>

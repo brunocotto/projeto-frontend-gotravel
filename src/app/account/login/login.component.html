@@ -1,0 +1,26 @@
+<div class="authenticate-container">
+    <form class="center-container" method="post" (ngSubmit)="onSubmit()" #form="ngForm">
+        <h2>Faça seu login</h2>
+        <div>
+            <mat-form-field appearance="outline">
+                <input type="email" matInput placeholder="Seu e-mail" [(ngModel)]="login.email" [ngModelOptions]="{standalone: true}" required>
+            <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <input type="password" matInput placeholder="Sua senha" [(ngModel)]="login.password" [ngModelOptions]="{standalone: true}" required>
+            <mat-icon matSuffix>locke</mat-icon>
+            </mat-form-field>
+        </div>
+        <div>
+            <button id="login-account" class="mat-button" type="submit" [disabled]="form.form.invalid">ENTRAR</button>
+            <button id="create-account" class="mat-button" type="button" [routerLink]="['/auth/register']">CRIAR CONTA</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
