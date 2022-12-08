@@ -29,7 +29,7 @@ export class TravelService {
   //Utilizando o modelo de produto criado no product.model.ts
   //Notação generics => Observable<Travel> => Retorna um observable do tipo travel
   create(travel: Travel): Observable<Travel> {
-    return this.http.post<Travel>(environment.baseURL_CRUD, travel).pipe(
+    return this.http.post<Travel>(`${environment.api}travel/create`, travel).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
@@ -37,7 +37,7 @@ export class TravelService {
 
   //lendo dados do back
   read(): Observable<Travel[]> {
-    return this.http.get<Travel[]>(environment.baseURL_CRUD,).pipe(
+    return this.http.get<Travel[]>(`${environment.api}/travel`,).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );

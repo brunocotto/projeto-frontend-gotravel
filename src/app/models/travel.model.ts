@@ -1,5 +1,5 @@
 export interface Travel {
-    id?: number
+    _id?: number
     title: string
     description: string
     destiny: string

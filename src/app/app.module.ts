@@ -1,3 +1,4 @@
+import { httpInterceptorsProviders } from './interceptors/index';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -32,6 +33,7 @@ import { TravelCrudComponent } from './views/travel-crud/travel-crud.component';
 import { LoginComponent } from './account/login/login.component';
 import { AuthenticationComponent } from './views/authentication/authentication.component';
 import { RegisterComponent } from './account/register/register.component';
+import { TravelReadComponent } from './components/travel/travel-read/travel-read.component';
 
 
 @NgModule({
@@ -46,6 +48,7 @@ import { RegisterComponent } from './account/register/register.component';
     LoginComponent,
     AuthenticationComponent,
     RegisterComponent,
+    TravelReadComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,7 @@ import { RegisterComponent } from './account/register/register.component';
     HttpClientModule,
     MatSnackBarModule,
   ],
-  providers: [],
+  providers: [httpInterceptorsProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

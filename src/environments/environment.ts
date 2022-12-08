@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   api: 'http://localhost:3000',
-  baseURL_CRUD: "http://localhost:3000/travel"
 };
 
 /*

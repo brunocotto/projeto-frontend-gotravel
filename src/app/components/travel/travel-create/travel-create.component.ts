@@ -13,7 +13,6 @@ export class TravelCreateComponent implements OnInit {
     title: '',
     description: '',
     destiny:'',
-    id: 0
   }
 
 
@@ -29,7 +28,7 @@ export class TravelCreateComponent implements OnInit {
     //A função subscribe() define como obter ou gerar valores ou mensagens a serem publicadas.
     this.travelService.create(this.travel).subscribe(() => {
       this.travelService.showMessage('Viagem criada com sucesso.')
-      this.router.navigate(['/travel'])
+      this.router.navigate(['/travel/create'])
     })
   }
 
