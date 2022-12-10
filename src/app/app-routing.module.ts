@@ -1,3 +1,5 @@
+import { TravelDeleteComponent } from './components/travel/travel-delete/travel-delete.component';
+import { TravelUpdateComponent } from './componenets/travel/travel-update/travel-update.component';
 import { TravelHomeComponent } from './components/travel-home/travel-home.component';
 import { RegisterComponent } from './account/register/register.component';
 import { AuthGuard } from './account/shared/auth.guard';
@@ -22,11 +24,11 @@ const routes: Routes = [{
     path: "travel/create",
     component: TravelCreateComponent
   },{
-    path: "travel/:travelId",
-    component: TravelCreateComponent
+    path: "travel/update/:_id",
+    component: TravelUpdateComponent
   },{
-    path: "travel/create",
-    component: TravelCreateComponent
+    path: "travel/delete/:_id",
+    component: TravelDeleteComponent
   }],
   canActivate: [AuthGuard]
 },{

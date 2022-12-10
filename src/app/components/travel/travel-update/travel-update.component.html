@@ -1,1 +1,26 @@
-<p>travel-update works!</p>
+<mat-card>
+    <mat-card-title>Alterar Viagem</mat-card-title>
+    <form>
+        <mat-form-field>
+            <!--[(ngModel)]="product.name"-->
+            <input matInput [(ngModel)]="travel.title" name="title">
+            <mat-placeholder class="Nome">Nome</mat-placeholder>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="travel.description" name="description">
+            <mat-placeholder class="Titulo">Preço</mat-placeholder>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="travel.destiny" name="destiny">
+            <mat-placeholder class="Destino">Preço</mat-placeholder>
+        </mat-form-field>
+    </form>
+    <button id="btn-update" mat-raised-button (click)="updateTravel()">
+        Atualizar
+    </button>
+    
+    <button id="btn-cancel" mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
+
