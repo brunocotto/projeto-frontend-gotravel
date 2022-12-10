@@ -1,4 +1,3 @@
-
 import { Travel } from './../../../models/travel.model';
 import { Component, OnInit } from '@angular/core';
 import { TravelService } from 'src/app/services/travel.service';
@@ -11,8 +10,8 @@ import { TravelService } from 'src/app/services/travel.service';
 export class TravelReadComponent implements OnInit {
 
    //products! => "!" sintaxe existe para aqueles casos comuns em que você não pode garantir que o valor será definido imediatamente. 
-   travels?: Travel[]
-   displayedColumns = ['_id', 'title', 'description', 'destiny']
+   public travels!: Travel[]
+   displayedColumns = ['_id', 'title', 'description', 'destiny', 'action']
 
   constructor(private travelService: TravelService) {}
 

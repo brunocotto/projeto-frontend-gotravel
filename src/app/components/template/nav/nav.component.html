@@ -3,13 +3,13 @@
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <!--mat-nav-list => estilo do menu - vertical--> 
         <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="/">
+            <a mat-list-item selected routerLink="/home">
                 <i class="material-icons">
                     home
                 </i>
                 Início
             </a>
-            <a mat-list-item routerLink="/travels">
+            <a mat-list-item routerLink="/travel">
                 <i class="material-icons">
                     flight
                 </i>
@@ -23,8 +23,7 @@
             </a>
         </mat-nav-list>
     </mat-sidenav>
-
-    <mat-sidenav-content class="content">
+    <mat-sidenav-content class="content">  
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>

@@ -34,7 +34,12 @@ import { LoginComponent } from './account/login/login.component';
 import { AuthenticationComponent } from './views/authentication/authentication.component';
 import { RegisterComponent } from './account/register/register.component';
 import { TravelReadComponent } from './components/travel/travel-read/travel-read.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { TravelUpdateComponent } from './componenets/travel/travel-update/travel-update.component';
+import { TravelDeleteComponent } from './components/travel/travel-delete/travel-delete.component';
+import { TravelHomeComponent } from './components/travel-home/travel-home.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +54,9 @@ import { TravelReadComponent } from './components/travel/travel-read/travel-read
     AuthenticationComponent,
     RegisterComponent,
     TravelReadComponent,
+    TravelUpdateComponent,
+    TravelDeleteComponent,
+    TravelHomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +75,9 @@ import { TravelReadComponent } from './components/travel/travel-read/travel-read
     CommonModule,
     HttpClientModule,
     MatSnackBarModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers: [httpInterceptorsProviders],
   bootstrap: [AppComponent]

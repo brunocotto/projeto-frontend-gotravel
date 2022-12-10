@@ -11,7 +11,7 @@ export class AccountService {
   constructor(private http: HttpClient) { }
 
   async login(user: any) {
-    const result = await this.http.post<any>(`${environment.api}/auth/authenticate`, user).toPromise()
+    const result = await this.http.post<any>(`${environment.api}/auth/authenticate`,user).toPromise()
     if (result && result.token) {
       window.localStorage.setItem('token', result.token);
       return true;
@@ -20,6 +20,7 @@ export class AccountService {
   }
 
   async createAccount(register: any) {
+    console.log(JSON.stringify(register))
     const result = await this.http.post<any>(`${environment.api}/auth/register`, register).toPromise();
     return result;
   }

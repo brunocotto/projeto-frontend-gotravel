@@ -1,3 +1,4 @@
+import { TravelHomeComponent } from './components/travel-home/travel-home.component';
 import { RegisterComponent } from './account/register/register.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { LoginComponent } from './account/login/login.component';
@@ -12,9 +13,18 @@ const routes: Routes = [{
   path: "",
   component: HomeComponent,
   children: [{
-    path: "travels",
+    path: "home",
+    component: TravelHomeComponent
+  },{
+    path: "travel",
     component: TravelCrudComponent
-  }, {
+  },{
+    path: "travel/create",
+    component: TravelCreateComponent
+  },{
+    path: "travel/:travelId",
+    component: TravelCreateComponent
+  },{
     path: "travel/create",
     component: TravelCreateComponent
   }],

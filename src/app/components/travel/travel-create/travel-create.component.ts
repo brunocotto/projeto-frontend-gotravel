@@ -9,7 +9,7 @@ import { TravelService } from 'src/app/services/travel.service';
   styleUrls: ['./travel-create.component.css']
 })
 export class TravelCreateComponent implements OnInit {
-  travel: Travel = {
+  public travel: Travel = {
     title: '',
     description: '',
     destiny:'',
@@ -33,6 +33,6 @@ export class TravelCreateComponent implements OnInit {
   }
 
   cancel(): void {
-    this.router.navigate(['/travels'])
+    this.router.navigate(['/travel'])
   }
 }

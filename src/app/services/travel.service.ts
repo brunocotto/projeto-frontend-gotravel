@@ -29,7 +29,8 @@ export class TravelService {
   //Utilizando o modelo de produto criado no product.model.ts
   //Notação generics => Observable<Travel> => Retorna um observable do tipo travel
   create(travel: Travel): Observable<Travel> {
-    return this.http.post<Travel>(`${environment.api}travel/create`, travel).pipe(
+    console.log(JSON.stringify(travel))
+    return this.http.post<Travel>(`${environment.api}/travel/create`, travel).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
