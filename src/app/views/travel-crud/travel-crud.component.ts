@@ -1,3 +1,4 @@
+import { TravelService } from 'src/app/services/travel.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from 'src/app/components/template/header/header.service';
@@ -9,7 +10,7 @@ import { HeaderService } from 'src/app/components/template/header/header.service
 })
 export class TravelCrudComponent implements OnInit {
 
-  constructor(private router: Router, private headerService: HeaderService) {
+  constructor(private router: Router, private headerService: HeaderService, private travelService: TravelService) {
     headerService.headerData = {
       title: 'Minhas Viagens',
       icon: 'flight',
@@ -23,5 +24,4 @@ export class TravelCrudComponent implements OnInit {
   navigateToTravelCreate(): void {
     this.router.navigate(['/travel/create'])
   }
-
 }
