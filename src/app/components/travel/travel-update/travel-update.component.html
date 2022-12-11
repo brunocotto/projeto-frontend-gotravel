@@ -3,16 +3,16 @@
     <form>
         <mat-form-field>
             <!--[(ngModel)]="product.name"-->
-            <input matInput [(ngModel)]="travel.title" name="title">
-            <mat-placeholder class="Nome">Nome</mat-placeholder>
+            <input matInput [(ngModel)]="travel.title" name="title" >
+            <mat-placeholder class="Titulo">Título</mat-placeholder>
         </mat-form-field>
         <mat-form-field>
             <input matInput [(ngModel)]="travel.description" name="description">
-            <mat-placeholder class="Titulo">Preço</mat-placeholder>
+            <mat-placeholder class="Descrição">Descrição</mat-placeholder>
         </mat-form-field>
         <mat-form-field>
             <input matInput [(ngModel)]="travel.destiny" name="destiny">
-            <mat-placeholder class="Destino">Preço</mat-placeholder>
+            <mat-placeholder class="Destino">Destino</mat-placeholder>
         </mat-form-field>
     </form>
     <button id="btn-update" mat-raised-button (click)="updateTravel()">
@@ -23,4 +23,3 @@
         Cancelar
     </button>
 </mat-card>
-

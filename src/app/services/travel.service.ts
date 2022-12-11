@@ -29,7 +29,7 @@ export class TravelService {
   //Utilizando o modelo de produto criado no product.model.ts
   //Notação generics => Observable<Travel> => Retorna um observable do tipo travel
   create(travel: Travel): Observable<Travel> {
-    console.log(JSON.stringify(travel))
+    //console.log(JSON.stringify(travel))
     return this.http.post<Travel>(`${environment.api}/travel/create`, travel).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -55,7 +55,15 @@ export class TravelService {
 
   //update for ID
   update(travel: Travel): Observable<Travel> {
-    return this.http.patch<Travel>(`${environment.api}/travel/${travel._id}`, travel).pipe(
+    return this.http.patch<Travel>(`${environment.api}/travel/update/${travel._id}`, travel).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  //delete for ID
+  delete(_id: string): Observable<Travel> {
+    return this.http.delete<Travel>(`${environment.api}/travel/delete/${_id}`).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
@@ -63,7 +71,7 @@ export class TravelService {
 
   //tratamento de erro
   errorHandler(e: any): Observable<any> {
-    this.showMessage('Ocorreu um erro', true);
+    this.showMessage('Ocorreu um erro.', true);
     return EMPTY;
   }
 }

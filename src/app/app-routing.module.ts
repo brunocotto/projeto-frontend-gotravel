@@ -1,6 +1,6 @@
+import { TaskHomeComponent } from './components/task/task-home/task-home.component';
 import { TravelDeleteComponent } from './components/travel/travel-delete/travel-delete.component';
-import { TravelUpdateComponent } from './componenets/travel/travel-update/travel-update.component';
-import { TravelHomeComponent } from './components/travel-home/travel-home.component';
+import { TravelHomeComponent } from './components/template/travel-home/travel-home.component';
 import { RegisterComponent } from './account/register/register.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { LoginComponent } from './account/login/login.component';
@@ -10,6 +10,7 @@ import { TravelCreateComponent } from './components/travel/travel-create/travel-
 import { HomeComponent } from './views/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TravelUpdateComponent } from './components/travel/travel-update/travel-update.component';
 
 const routes: Routes = [{
   path: "",
@@ -29,6 +30,9 @@ const routes: Routes = [{
   },{
     path: "travel/delete/:_id",
     component: TravelDeleteComponent
+  },{
+    path: "task",
+    component: TaskHomeComponent
   }],
   canActivate: [AuthGuard]
 },{

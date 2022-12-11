@@ -37,9 +37,10 @@ import { TravelReadComponent } from './components/travel/travel-read/travel-read
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { TravelUpdateComponent } from './componenets/travel/travel-update/travel-update.component';
 import { TravelDeleteComponent } from './components/travel/travel-delete/travel-delete.component';
-import { TravelHomeComponent } from './components/travel-home/travel-home.component';
+import { TravelHomeComponent } from './components/template/travel-home/travel-home.component';
+import { TravelUpdateComponent } from './components/travel/travel-update/travel-update.component';
+import { TaskHomeComponent } from './components/task/task-home/task-home.component';
 
 @NgModule({
   declarations: [
@@ -54,9 +55,10 @@ import { TravelHomeComponent } from './components/travel-home/travel-home.compon
     AuthenticationComponent,
     RegisterComponent,
     TravelReadComponent,
-    TravelUpdateComponent,
     TravelDeleteComponent,
     TravelHomeComponent,
+    TravelUpdateComponent,
+    TaskHomeComponent,
   ],
   imports: [
     BrowserModule,

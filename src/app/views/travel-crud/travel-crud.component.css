@@ -7,16 +7,13 @@ button {
     background-color: #151515;
     margin-bottom: 30px;
     color: #fff;
-    border: solid;
-    border-color: #6833e4;
-    border-width: 1px;
-    background-color: transparent;
+    background-color: #6833e4;
     border-radius: 6px;
     transition: 0.3s;
     cursor: pointer;
-    opacity: 0.9
+    opacity: 0.8
 }
 
 button:hover {
-    background-color:  #6833e4;
+    opacity: 1;
 }
